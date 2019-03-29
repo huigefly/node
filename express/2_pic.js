@@ -10,13 +10,7 @@ var urlencodedParser = bodyParser.urlencoded({ extended: false })
 
 // use static pic res
 app.use(express.static('public'));
-
 app.use(multer({ dest: './tmp/'}).array('image'));
-
-var options = {
-	key: fs.readFileSync('C:\\ssl\\1965568_ccgame.online.key'),
-	cert: fs.readFileSync('C:\\ssl\\1965568_ccgame.online.pem')
-};
 
 var privateKey  = fs.readFileSync('C:\\ssl\\1965568_ccgame.online.key', 'utf8');
 var certificate = fs.readFileSync('C:\\ssl\\1965568_ccgame.online.pem', 'utf8');
@@ -30,7 +24,6 @@ httpsServer.listen (8990, function () {
 	console.log ("https server:%s port:%s", host, port);
 });
 
-
 app.get('/getOpenid', function (req, res) {
 	// 输出 JSON 格式
    response = {
@@ -39,6 +32,7 @@ app.get('/getOpenid', function (req, res) {
    res.send(JSON.stringify(response));
 })
  
+// 处理post请求
 app.post('/post', urlencodedParser, function (req, res) {
    // 输出 JSON 格式
    response = {
@@ -49,28 +43,36 @@ app.post('/post', urlencodedParser, function (req, res) {
    res.end(JSON.stringify(response));
 })
  
-app.get('/index.htm', function (req, res) {
+// 主要用于回传界面，显示上传选择文件按钮
+app.get('/fileUpload.html', function (req, res) {
+   console.log ("file upload request!");
    res.sendFile( __dirname + "/" + "fileUpload.html" );
 })
  
+// 处理ui发送过来的file_upload请求
 app.post('/file_upload', function (req, res) {
 
-   console.log(req.files[0]);  // 上传的文件信息
+    console.log(req.files[0]);  // 上传的文件信息
 
-   var des_file = __dirname + "/" + req.files[0].originalname;
-   fs.readFile( req.files[0].path, function (err, data) {
+    var des_file = __dirname + "/recvFile/" + req.files[0].originalname;
+        fs.readFile( req.files[0].path, function (err, data) {
         fs.writeFile(des_file, data, function (err) {
-         if( err ){
-              console.log( err );
-         }else{
-               response = {
-                   message:'File uploaded successfully', 
-                   filename:req.files[0].originalname
-              };
-          }
-          console.log( response );
-          res.end( JSON.stringify( response ) );
-       });
-   });
+            if( err ){
+                console.log( err );
+            }else{
+                response = {
+                    message:'File uploaded successfully', 
+                    filename:req.files[0].originalname
+                };
+            }
+            console.log( response );
+            // 防止中文乱码
+            res.writeHead(200, {'Content-Type': 'text/html; charset=utf-8'});
+            res.end( JSON.stringify( response ) );
+        });
+    });
+   
+   // 清理缓存
+   fs.unlinkSync (req.files[0].path, null);
 })
  
