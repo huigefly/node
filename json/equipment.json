@@ -1,6 +1,6 @@
 [
   {
-    "id": "1001001",
+    "id": 1001001,
     "fire_rate": 100,
     "spec_effect": 1,
     "fire_power": 100,
@@ -8,7 +8,7 @@
     "upgrade_cost": 10000
   },
   {
-    "id": "1001002",
+    "id": 1001002,
     "fire_rate": 200,
     "spec_effect": 1,
     "fire_power": 200,
@@ -16,7 +16,7 @@
     "upgrade_cost": 20000
   },
   {
-    "id": "1001003",
+    "id": 1001003,
     "fire_rate": 300,
     "spec_effect": 1,
     "fire_power": 300,
@@ -24,7 +24,7 @@
     "upgrade_cost": 30000
   },
   {
-    "id": "1001004",
+    "id": 1001004,
     "fire_rate": 400,
     "spec_effect": 1,
     "fire_power": 400,
@@ -32,7 +32,7 @@
     "upgrade_cost": 10000
   },
   {
-    "id": "1002001",
+    "id": 1002001,
     "fire_rate": 100,
     "spec_effect": 2,
     "fire_power": 100,
@@ -40,7 +40,7 @@
     "upgrade_cost": 10000
   },
   {
-    "id": "1002002",
+    "id": 1002002,
     "fire_rate": 200,
     "spec_effect": 2,
     "fire_power": 200,
@@ -48,7 +48,7 @@
     "upgrade_cost": 20000
   },
   {
-    "id": "1002003",
+    "id": 1002003,
     "fire_rate": 300,
     "spec_effect": 2,
     "fire_power": 300,
@@ -56,7 +56,7 @@
     "upgrade_cost": 30000
   },
   {
-    "id": "1002004",
+    "id": 1002004,
     "fire_rate": 400,
     "spec_effect": 2,
     "fire_power": 400,
@@ -64,7 +64,7 @@
     "upgrade_cost": 10000
   },
   {
-    "id": "1003001",
+    "id": 1003001,
     "fire_rate": 100,
     "spec_effect": 3,
     "fire_power": 100,
@@ -72,7 +72,7 @@
     "upgrade_cost": 10000
   },
   {
-    "id": "1003002",
+    "id": 1003002,
     "fire_rate": 200,
     "spec_effect": 3,
     "fire_power": 200,
@@ -80,7 +80,7 @@
     "upgrade_cost": 20000
   },
   {
-    "id": "1003003",
+    "id": 1003003,
     "fire_rate": 300,
     "spec_effect": 3,
     "fire_power": 300,
@@ -88,7 +88,7 @@
     "upgrade_cost": 30000
   },
   {
-    "id": "1003004",
+    "id": 1003004,
     "fire_rate": 400,
     "spec_effect": 3,
     "fire_power": 400,
@@ -96,7 +96,7 @@
     "upgrade_cost": 10000
   },
   {
-    "id": "1004001",
+    "id": 1004001,
     "fire_rate": 100,
     "spec_effect": 4,
     "fire_power": 100,
@@ -104,7 +104,7 @@
     "upgrade_cost": 10000
   },
   {
-    "id": "1004002",
+    "id": 1004002,
     "fire_rate": 200,
     "spec_effect": 4,
     "fire_power": 200,
@@ -112,7 +112,7 @@
     "upgrade_cost": 20000
   },
   {
-    "id": "1004003",
+    "id": 1004003,
     "fire_rate": 300,
     "spec_effect": 4,
     "fire_power": 300,
@@ -120,7 +120,7 @@
     "upgrade_cost": 30000
   },
   {
-    "id": "1004004",
+    "id": 1004004,
     "fire_rate": 400,
     "spec_effect": 4,
     "fire_power": 400,

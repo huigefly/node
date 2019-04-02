@@ -1,0 +1,33 @@
+[
+  {
+    "level": 1,
+    "spec_effect": 1,
+    "fire_power": 100,
+    "upgrade_cost": 20000
+  },
+  {
+    "level": 2,
+    "spec_effect": 1,
+    "fire_power": 200,
+    "upgrade_cost": 30000
+  },
+  {
+    "level": 3,
+    "spec_effect": 1,
+    "fire_power": 300,
+    "upgrade_cost": 40000
+  },
+  {
+    "level": 4,
+    "spec_effect": 1,
+    "fire_power": 400,
+    "upgrade_cost": 50000
+  },
+  {
+    "comment": "level = 5, effect change",
+    "level": 5,
+    "spec_effect": 2,
+    "fire_power": 500,
+    "upgrade_cost": 60000
+  }
+]
